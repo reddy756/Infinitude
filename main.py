@@ -68,12 +68,12 @@ def update(employe_id:int, employe:Employee):
         return {"Employe":"NOt exsists"}
     employee[employe_id] = employe
 
-@app.delete("/del/{employ_id}")
-def delete(employ_id:int):
-    if employ_id in employee:
-        del employee[employ_id]
-        return {'data':"deleted successfully"}
-    return {'data':'not found'}
+# @app.delete("/del/{employ_id}")
+# def delete(employ_id:int):
+#     if employ_id in employee:
+#         del employee[employ_id]
+#         return {'data':"deleted successfully"}
+#     return {'data':'not found'}
 
 
 
@@ -81,10 +81,10 @@ def delete(employ_id:int):
 
 from fastapi import FastAPI
 from pydantic import BaseModel
-# app=FastAPI()
-#
-# @app.get('/test')
-# def first():
-#     return {'data':'nothing'}
+app=FastAPI()
+
+@app.get('/test')
+def first():
+    return {'data':'nothing'}
 
 from sqlalchemy import create_engine
