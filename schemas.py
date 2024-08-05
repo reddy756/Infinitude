@@ -4,4 +4,4 @@ class UserSchema(BaseModel):
     id: int
     name: str
     email: str
-    nickname: str # this was used to basemodel
+    nickname: str # this was used to basemodelhi
